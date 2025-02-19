@@ -10,26 +10,30 @@ namespace NET_Course
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter two integers");
-            int a = Convert.ToInt32(Console.ReadLine());
-            int b = Convert.ToInt32(Console.ReadLine());
+            // Value types
+            int x = 5, y = x;
+            y = 10;
+            Console.WriteLine("Значимые типы:");
+            Console.WriteLine($"x: {x}, y: {y}");
 
-            var sumResult = MathSanek.Sum(a, b);
-            var multResult = MathSanek.Multiplication(a, b);
-            Console.WriteLine($"Sum of two integers: {sumResult}");
-            Console.WriteLine($"Result of multiplication: {multResult}");
+            var teacher1 = new Teacher("Mykyta"); // Struct
+            var teacher2 = teacher1;
+            Console.WriteLine($@"Имя первого учителя: {teacher1.Name}, имя второго учителя: {teacher2.Name} (до изменений)");
+            teacher2.Name = "Danylo";
+            Console.WriteLine($@"Имя первого учителя: {teacher1.Name}, имя второго учителя: {teacher2.Name} (после изменений)");
+
+            // Reference types
+            string a = "Foo", b = a;
+            b = "Boo"; // Создаётся новый объект в куче, а не "дополняется" существующий
+            Console.WriteLine("\nСсылочные типы:");
+            Console.WriteLine($"a: {a}, b: {b}");
+
+            var student1 = new Student("Sanek");
+            var student2 = student1;
+            Console.WriteLine($"Имя первого студента: {student1.Name}, второго: {student2.Name} (до изменений)");
+            student2.Name = "Igor";
+            Console.WriteLine($"Имя первого студента: {student1.Name}, второго: {student2.Name} (после изменений)");
         }
     }
-    public class MathSanek 
-    {
-        public static int Sum(int a, int b) 
-        {
-            return a + b;
-        }
 
-        public static int Multiplication(int a, int b) 
-        {
-            return a * b;
-        }
-    }
 }
