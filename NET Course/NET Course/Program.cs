@@ -33,6 +33,7 @@ namespace NET_Course
             Console.WriteLine($"Имя первого студента: {student1.Name}, второго: {student2.Name} (до изменений)");
             student2.Name = "Igor";
             Console.WriteLine($"Имя первого студента: {student1.Name}, второго: {student2.Name} (после изменений)");
+
         }
     }
 
