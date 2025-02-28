@@ -10,7 +10,7 @@ namespace NET_Course
     {
         static void Main(string[] args)
         {
-            // Value types
+            // Value types - хранятся непосредственно в стеке
             int x = 5, y = x;
             y = 10;
             Console.WriteLine("Значимые типы:");
@@ -22,7 +22,7 @@ namespace NET_Course
             teacher2.Name = "Danylo";
             Console.WriteLine($@"Имя первого учителя: {teacher1.Name}, имя второго учителя: {teacher2.Name} (после изменений)");
 
-            // Reference types
+            // Reference types - объект хранится в куче, переменная в стеке содержит ссылку на него
             string a = "Foo", b = a;
             b = "Boo"; // Создаётся новый объект в куче, а не "дополняется" существующий
             Console.WriteLine("\nСсылочные типы:");
