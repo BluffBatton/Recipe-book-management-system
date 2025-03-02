@@ -1,17 +1,22 @@
-﻿using Core.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Core.Models
+﻿namespace Core.Models
 {
-    internal class User
+    public class User
     {
-        public int id { get; set; }
+        public int UserID { get; set; }
         public string Name { get; set; }
-        public List<Book> Books { get; set; } = new List<Book>();
-        UserRole Role { get; set; }
+        private List<Book> books { get; set; } = new List<Book>();
+
+        public List<Book> GetBooks()
+        {
+            return new List<Book>(books);
+        }
+        public void AddBook(Book Book)
+        {
+            books.Add(Book);
+        }
+        public void DeleteBook(Book Book)
+        {
+            books.Remove(Book);
+        }
     }
 }

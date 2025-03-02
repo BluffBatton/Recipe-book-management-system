@@ -1,15 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Core.Models
+﻿namespace Core.Models
 {
-    internal class Recipe
+    public class Recipe
     {
         public string ?Title { get; set; }
         public string ?Instructions { get; set; }
-        public List<Ingredient> Ingredients { get; set; } = new List<Ingredient>();
+        private List<Ingredient> ingredients { get; set; } = new List<Ingredient>();
+
+        public List<Ingredient> GetIngredients()
+        {
+            return new List<Ingredient>(ingredients);
+        }
+        public void AddIngredient(Ingredient ingredient)
+        {
+            ingredients.Add(ingredient);
+        }
+        public void DeleteIngredient(Ingredient ingredient)
+        {
+            ingredients.Remove(ingredient);
+        }
     }
 }

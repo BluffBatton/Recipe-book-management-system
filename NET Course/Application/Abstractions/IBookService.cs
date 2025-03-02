@@ -1,13 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using Core.Models;
 namespace Application.Abstractions
 {
     public interface IBookService
     {
-        void CreateBook();
+        public void CreateBook(Book book, User user);
+        public IEnumerable<Book> ReadAllBooks();
+        public Book GetBook(string title);
+        public void UpdateBook(Book book, User user);
+        public void DeleteBook(Book book, User user);
+        public IEnumerable<Book> GetRecipesForBook(Book book);
+        public void AddRecipeToBook(Book book, Recipe recipe);
+        public void DeleteRecipeFromBook(Book book, Recipe recipe);
     }
 }
