@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using Infrastructure.Collections;
 
 namespace NET_Course
 {
