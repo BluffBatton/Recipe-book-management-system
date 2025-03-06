@@ -3,7 +3,7 @@
     public class User
     {
         public int UserID { get; set; }
-        public string Name { get; set; }
+        public string ?Name { get; set; }
         private List<Book> books { get; set; } = new List<Book>();
 
         public List<Book> GetBooks()

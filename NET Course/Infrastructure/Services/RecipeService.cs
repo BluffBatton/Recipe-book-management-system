@@ -1,4 +1,5 @@
-﻿using Core.Models;
+﻿using Application.Abstractions;
+using Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Services
 {
-    internal class RecipeService
+    internal class RecipeService : IRecipeService
     {
-        public void CreateRecipe(Recipe recipe)
+        public void CreateRecipe(Recipe recipe, Ingredient ingredient)
         {
             throw new NotImplementedException();
         }
@@ -21,7 +22,7 @@ namespace Infrastructure.Services
         {
             throw new NotImplementedException();
         }
-        public void UpdateRecipe(Recipe recipe)
+        public void UpdateRecipe(Recipe recipe, Ingredient ingredient)
         {
             throw new NotImplementedException();
         }

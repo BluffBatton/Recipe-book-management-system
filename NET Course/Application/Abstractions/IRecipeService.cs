@@ -1,13 +1,12 @@
 ﻿using Core.Models;
 namespace Application.Abstractions
 {
-    internal interface IRecipeService
+    public interface IRecipeService
     {
-        void CreateRecipe(Recipe recipe);
+        void CreateRecipe(Recipe recipe, Ingredient ingredient);
         IEnumerable<Recipe> GetAllRecipes();
         Recipe ReadRecipe(string title);
-        void UpdateRecipe(Recipe recipe);
+        void UpdateRecipe(Recipe recipe, Ingredient ingredient);
         void DeleteRecipe(Recipe recipe);
     }
 }
-//IEnumerable<Recipe> ReadAllRecipes();

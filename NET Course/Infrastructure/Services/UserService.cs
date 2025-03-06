@@ -1,4 +1,5 @@
-﻿using Core.Models;
+﻿using Application.Abstractions;
+using Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Services
 {
-    internal class UserService
+    internal class UserService : IUserService
     {
         public void CreateUser(User user)
         {
