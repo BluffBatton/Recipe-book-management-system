@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Diagnostics;
+﻿using System.Collections;
 using System.Runtime.CompilerServices;
 
 namespace NET_Course
@@ -11,7 +9,6 @@ namespace NET_Course
 
         private int count;
 
-        //public int Capacity { get { return capacity; } }
         public int Count 
         {
             get 

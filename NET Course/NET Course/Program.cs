@@ -20,18 +20,8 @@ namespace NET_Course
             list.Remove(30);
             Console.WriteLine("Removed number 30");
             ListForEachTest(customList);
-            Console.WriteLine("Getting number by index 1: " + list[5]);
-            Console.WriteLine("Попытка выхода за границы:");
-            try
-            {
-                Console.WriteLine(list[10]); // Ожидаем исключение
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Ошибка: " + ex.Message);
-            }
+            Console.WriteLine("Getting number by index 1: " + list[1]);
         }
-
         internal static void ListForEachTest(CustomList<int> customList)
         {
             foreach (var item in customList)
