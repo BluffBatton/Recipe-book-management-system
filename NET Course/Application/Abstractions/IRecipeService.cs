@@ -1,7 +1,7 @@
 ﻿using Core.Models;
 namespace Application.Abstractions
 {
-    internal interface IRecipeService
+    public interface IRecipeService
     {
         void CreateRecipe(Recipe recipe);
         IEnumerable<Recipe> GetAllRecipes();

@@ -42,5 +42,10 @@ namespace Infrastructure.Services
         {
             throw new NotImplementedException();
         }
+
+        public IEnumerable<Book> FilterBooks(Func<Book, bool> filter)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

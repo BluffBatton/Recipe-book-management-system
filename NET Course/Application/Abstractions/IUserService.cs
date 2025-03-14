@@ -7,12 +7,14 @@ using System.Threading.Tasks;
 
 namespace Application.Abstractions
 {
-    internal interface IUserService
+    public interface IUserService
     {
         void CreateUser(User user);
         User ReadUser(int UserID);
         IEnumerable<User> ReadUsers();
         void UpdateUser(User user);
         void DeleteUser(User user);
+
+        User FindUserById(Func<int, User> id);
     }
 }
