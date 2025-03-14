@@ -17,6 +17,8 @@ namespace NET_Course
 
             ListForEachTest(customList);
 
+            //int dodik = ;
+
             list.Remove(30);
             Console.WriteLine("Removed number 30");
             ListForEachTest(customList);
