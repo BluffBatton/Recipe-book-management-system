@@ -30,5 +30,9 @@ namespace Infrastructure.Services
         {
             throw new NotImplementedException();
         }
+        public User FindUserById(Func<int, User> id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

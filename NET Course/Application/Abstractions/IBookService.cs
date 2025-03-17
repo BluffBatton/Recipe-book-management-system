@@ -11,5 +11,7 @@ namespace Application.Abstractions
         public IEnumerable<Book> GetRecipesForBook(Book book);
         public void AddRecipeToBook(Book book, Recipe recipe);
         public void DeleteRecipeFromBook(Book book, Recipe recipe);
+
+        IEnumerable<Book> FilterBooks(Func<Book, bool> filter);
     }
 }

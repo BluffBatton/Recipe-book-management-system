@@ -14,5 +14,7 @@ namespace Application.Abstractions
         IEnumerable<User> ReadUsers();
         void UpdateUser(User user);
         void DeleteUser(User user);
+
+        User FindUserById(Func<int, User> id);
     }
 }
