@@ -8,29 +8,29 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Services
 {
-    internal class UserService : IUserService
+    public class UserService : IUserService
     {
-        public void CreateUser(User user)
+        public void CreateUser(string username, string password)
         {
             throw new NotImplementedException();
         }
-        public User ReadUser(int UserID)
+
+        public void DeleteUser(int UserID)
         {
             throw new NotImplementedException();
         }
+
+        public User FindUserById(Func<int, User> id)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<User> ReadUsers()
         {
             throw new NotImplementedException();
         }
+
         public void UpdateUser(User user)
-        {
-            throw new NotImplementedException();
-        }
-        public void DeleteUser(User user)
-        {
-            throw new NotImplementedException();
-        }
-        public User FindUserById(Func<int, User> id)
         {
             throw new NotImplementedException();
         }

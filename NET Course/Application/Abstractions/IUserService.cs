@@ -9,11 +9,13 @@ namespace Application.Abstractions
 {
     public interface IUserService
     {
-        void CreateUser(User user);
-        User ReadUser(int UserID);
+        void CreateUser(string username, string password);
+
         IEnumerable<User> ReadUsers();
+
         void UpdateUser(User user);
-        void DeleteUser(User user);
+
+        void DeleteUser(int UserID);
 
         User FindUserById(Func<int, User> id);
     }

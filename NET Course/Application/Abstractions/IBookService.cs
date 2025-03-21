@@ -3,14 +3,21 @@ namespace Application.Abstractions
 {
     public interface IBookService
     {
-        public void CreateBook(Book book, User user);
+        public void CreateBook(Book book, int UserID);
+
         public IEnumerable<Book> ReadAllBooks();
+
         public Book GetBook(string title);
-        public void UpdateBook(Book book, User user);
-        public void DeleteBook(Book book, User user);
+
+        public void UpdateBook(Book book, int UserID);
+
+        public void DeleteBook(int BookID, int UserID);
+
         public IEnumerable<Book> GetRecipesForBook(Book book);
-        public void AddRecipeToBook(Book book, Recipe recipe);
-        public void DeleteRecipeFromBook(Book book, Recipe recipe);
+
+        public void AddRecipeToBook(Book book, int RecipeID);
+
+        public void DeleteRecipeFromBook(Book book, int RecipeID);
 
         IEnumerable<Book> FilterBooks(Func<Book, bool> filter);
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Core.Enums
 {
-    internal enum UserRole
+    public enum UserRole
     {
         User,
         Moderator,
