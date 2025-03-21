@@ -1,39 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace NET_Course
+﻿namespace NET_Course
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            // Value types - хранятся непосредственно в стеке
-            int x = 5, y = x;
-            y = 10;
-            Console.WriteLine("Значимые типы:");
-            Console.WriteLine($"x: {x}, y: {y}");
+            CustomList<int> customList = new CustomList<int>();
+            var list = customList;
+            list.Add(10);
+            list.Add(20);
+            list.Add(30);
+            list.Add(40);
+            list.Add(50);
+            Console.WriteLine($"Count: {list.Count}, Capacity: {list.Capacity}");
 
-            var teacher1 = new Teacher("Mykyta"); // Struct
-            var teacher2 = teacher1;
-            Console.WriteLine($@"Имя первого учителя: {teacher1.Name}, имя второго учителя: {teacher2.Name} (до изменений)");
-            teacher2.Name = "Danylo";
-            Console.WriteLine($@"Имя первого учителя: {teacher1.Name}, имя второго учителя: {teacher2.Name} (после изменений)");
+            ListForEachTest(customList);
 
-            // Reference types - объект хранится в куче, переменная в стеке содержит ссылку на него
-            string a = "Foo", b = a;
-            b = "Boo"; // Создаётся новый объект в куче, а не "дополняется" существующий
-            Console.WriteLine("\nСсылочные типы:");
-            Console.WriteLine($"a: {a}, b: {b}");
-
-            var student1 = new Student("Sanek");
-            var student2 = student1;
-            Console.WriteLine($"Имя первого студента: {student1.Name}, второго: {student2.Name} (до изменений)");
-            student2.Name = "Igor";
-            Console.WriteLine($"Имя первого студента: {student1.Name}, второго: {student2.Name} (после изменений)");
+            list.Remove(30);
+            Console.WriteLine("Removed number 30");
+            ListForEachTest(customList);
+            Console.WriteLine("Getting number by index 1: " + list[1]);
+        }
+        internal static void ListForEachTest(CustomList<int> customList)
+        {
+            foreach (var item in customList)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
-
 }
