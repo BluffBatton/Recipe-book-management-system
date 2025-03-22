@@ -2,7 +2,7 @@
 {
     public class Recipe
     {
-        public int RecipeID { get; set; }
+        public int Id { get; set; }
 
         public string? Title { get; set; }
 
