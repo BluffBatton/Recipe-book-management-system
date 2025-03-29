@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using System.Runtime.CompilerServices;
-
-
 namespace NET_Course
 {
     public class CustomList<T> : IEnumerable<T>
