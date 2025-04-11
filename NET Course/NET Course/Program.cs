@@ -1,5 +1,4 @@
-﻿using Core.Models;
-using Infrastructure.Repositories;
+﻿using Infrastructure.Repositories;
 
 namespace NET_Course
 {
