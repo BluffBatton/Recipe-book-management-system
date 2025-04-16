@@ -8,5 +8,20 @@
     "Id": 3,
     "Name": "Danylo",
     "Books": []
+  },
+  {
+    "Id": 1,
+    "Name": "Serega",
+    "Books": []
+  },
+  {
+    "Id": 5,
+    "Name": "Serega",
+    "Books": []
+  },
+  {
+    "Id": 6,
+    "Name": "Bobi",
+    "Books": []
   }
 ]

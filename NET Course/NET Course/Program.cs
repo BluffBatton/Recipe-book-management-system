@@ -1,4 +1,7 @@
 ﻿using Infrastructure.Repositories;
+using Infrastructure.Services;
+using Microsoft.Extensions.DependencyInjection;
+using Application.Abstractions;
 
 namespace NET_Course
 {
@@ -6,34 +9,18 @@ namespace NET_Course
     {
         static void Main()
         {
-            //List<User> newUsers = new List<User>
-            //{
-            //    new User { Id = 1, Name = "Sanek" },
-            //    new User { Id = 2, Name = "Mykyta" },
-            //    new User { Id = 3, Name = "Danylo" },
-            //};
+            ServiceCollection services = new();
+            services.AddSingleton<IUserRepository, UserRepository>();
+            services.AddSingleton<IUserService, UserService>();
+            using ServiceProvider provider = services.BuildServiceProvider();
 
-            //foreach(var user in newUsers)
-            //{
-            //    UserRepository.CreateUser(user);
-            //}
-            //Console.WriteLine("User has been added");
-
-            //var users = UserRepository.ReadUsers();
-            //Console.WriteLine("List of users:");
-            //foreach (var user in users)
-            //{
-            //    Console.WriteLine($"{user.Id}: {user.Name}");
-            //}
-
-            //UserRepository.DeleteUser(1);
-            //Console.WriteLine("User has been deleted");
-
-            var users = UserRepository.ReadUsers();
-            Console.WriteLine("List of users:");
-            foreach (var user in users)
+            var userManager = provider.GetService<IUserService>()!;
+            //var user = new User() { Id = 6, Name = "Bobi" };
+            //userManager.CreateUser(user);
+            var list = userManager.ReadUsers();
+            foreach(var item in list)
             {
-                Console.WriteLine($"{user.Id}: {user.Name}");
+                Console.WriteLine(item.Name);
             }
         }
     }

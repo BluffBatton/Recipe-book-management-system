@@ -1,12 +1,18 @@
 ﻿using Application.Abstractions;
 using Core.Models;
+
 namespace Infrastructure.Services
 {
     public class UserService : IUserService
     {
-        public void CreateUser(string username, string password)
+        private readonly IUserRepository _userRepository;
+        public UserService(IUserRepository userRepository)
         {
-            throw new NotImplementedException();
+            _userRepository = userRepository;
+        }
+        public void CreateUser(User user)
+        {
+            _userRepository.CreateUser(user);
         }
 
         public void DeleteUser(int UserID)
@@ -19,9 +25,10 @@ namespace Infrastructure.Services
             throw new NotImplementedException();
         }
 
-        public IEnumerable<User> ReadUsers()
+        public List<User> ReadUsers()
         {
-            throw new NotImplementedException();
+            /*throw new NotImplementedException();*/
+            return _userRepository.ReadUsers();
         }
 
         public void UpdateUser(User user)
