@@ -1,4 +1,5 @@
 ﻿using Infrastructure.Repositories;
+using Core.Models;
 
 namespace NET_Course
 {
@@ -6,6 +7,7 @@ namespace NET_Course
     {
         static void Main()
         {
+            var userRepository = new UserRepository();
             //List<User> newUsers = new List<User>
             //{
             //    new User { Id = 1, Name = "Sanek" },
@@ -13,23 +15,21 @@ namespace NET_Course
             //    new User { Id = 3, Name = "Danylo" },
             //};
 
-            //foreach(var user in newUsers)
+            //foreach (var user in newUsers)
             //{
-            //    UserRepository.CreateUser(user);
+            //    userRepository.CreateUser(user);
             //}
             //Console.WriteLine("User has been added");
-
-            //var users = UserRepository.ReadUsers();
+            //var users = userRepository.ReadUsers();
             //Console.WriteLine("List of users:");
             //foreach (var user in users)
             //{
             //    Console.WriteLine($"{user.Id}: {user.Name}");
             //}
-
-            //UserRepository.DeleteUser(1);
-            //Console.WriteLine("User has been deleted");
-
-            var users = UserRepository.ReadUsers();
+            /////
+            userRepository.DeleteUser(1);
+            Console.WriteLine("User has been deleted");
+            var users = userRepository.ReadUsers();
             Console.WriteLine("List of users:");
             foreach (var user in users)
             {
