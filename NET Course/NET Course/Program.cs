@@ -4,7 +4,8 @@
     {
         static void Main()
         {
-            Console.WriteLine("буп бип буп");
+            RaceCondition.Main1();
+            Deadlock.Main2();
         }
     }
 }
