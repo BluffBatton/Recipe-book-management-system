@@ -3,14 +3,14 @@ namespace Application.Abstractions
 {
     public interface IRecipeService
     {
-        void CreateRecipe(Recipe recipe);
+        Task CreateRecipe(Recipe recipe);
 
-        IEnumerable<Recipe> GetAllRecipes();
+        Task<IEnumerable<Recipe>> GetAllRecipes();
 
-        Recipe ReadRecipe(string title);
+        Task<Recipe> ReadRecipe(string title);
 
-        void UpdateRecipe(Recipe recipe);
+        Task UpdateRecipe(Recipe recipe);
 
-        void DeleteRecipe(int RecipeID);
+        Task DeleteRecipe(int RecipeID);
     }
 }

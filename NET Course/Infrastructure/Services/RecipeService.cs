@@ -1,32 +1,33 @@
 ﻿using Application.Abstractions;
 using Core.Models;
+
 namespace Infrastructure.Services
 {
     public class RecipeService : IRecipeService
     {
-        public void CreateRecipe(Recipe recipe)
+        public async Task CreateRecipe(Recipe recipe)
         {
-            throw new NotImplementedException();
+            await Task.CompletedTask;
         }
 
-        public void DeleteRecipe(int RecipeID)
+        public async Task DeleteRecipe(int RecipeID)
         {
-            throw new NotImplementedException();
+            await Task.CompletedTask;
         }
 
-        public IEnumerable<Recipe> GetAllRecipes()
+        public async Task<IEnumerable<Recipe>> GetAllRecipes()
         {
-            throw new NotImplementedException();
+            return await Task.FromResult(new List<Recipe>());
         }
 
-        public Recipe ReadRecipe(string title)
+        public async Task<Recipe> ReadRecipe(string title)
         {
-            throw new NotImplementedException();
+            return await Task.FromResult(new Recipe());
         }
 
-        public void UpdateRecipe(Recipe recipe)
+        public async Task UpdateRecipe(Recipe recipe)
         {
-            throw new NotImplementedException();
+            await Task.CompletedTask;
         }
     }
 }

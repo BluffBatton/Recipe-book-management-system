@@ -3,14 +3,14 @@ namespace Application.Abstractions
 {
     public interface IUserService
     {
-        void CreateUser(string username, string password);
+        Task CreateUser(string username, string password);
 
-        IEnumerable<User> ReadUsers();
+        Task<IEnumerable<User>> ReadUsers();
 
-        void UpdateUser(User user);
+        Task UpdateUser(User user);
 
-        void DeleteUser(int UserID);
+        Task DeleteUser(int UserID);
 
-        User FindUserById(Func<int, User> id);
+        Task<User> FindUserById(Func<int, User> id);
     }
 }

@@ -1,10 +1,15 @@
-﻿namespace NET_Course
+﻿using Infrastructure.Services;
+
+namespace NET_Course
 {
     internal class Program
     {
-        static void Main()
+        static async Task Main()
         {
-            Console.WriteLine("буп бип буп");
+            UserService userService = new UserService();
+
+            await userService.CreateUser("Serega", "123456");
+            await userService.DeleteUser(1);
         }
     }
 }

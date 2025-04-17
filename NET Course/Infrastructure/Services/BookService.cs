@@ -1,52 +1,53 @@
 ﻿using Application.Abstractions;
 using Core.Models;
+
 namespace Infrastructure.Services
 {
     public class BookService : IBookService
     {
-        public void AddRecipeToBook(Book book, int RecipeID)
+        public async Task AddRecipeToBook(Book book, int RecipeID)
         {
-            throw new NotImplementedException();
+            await Task.CompletedTask;
         }
 
-        public void CreateBook(Book book, int UserID)
+        public async Task CreateBook(Book book, int UserID)
         {
-            throw new NotImplementedException();
+            await Task.CompletedTask;
         }
 
-        public void DeleteBook(int BookID, int UserID)
+        public async Task DeleteBook(int BookID, int UserID)
         {
-            throw new NotImplementedException();
+            await Task.CompletedTask;
         }
 
-        public void DeleteRecipeFromBook(Book book, int RecipeID)
+        public async Task DeleteRecipeFromBook(Book book, int RecipeID)
         {
-            throw new NotImplementedException();
+            await Task.CompletedTask;
         }
 
-        public IEnumerable<Book> FilterBooks(Func<Book, bool> filter)
+        public async Task<IEnumerable<Book>> FilterBooks(Func<Book, bool> filter)
         {
-            throw new NotImplementedException();
+            return await Task.FromResult(new List<Book>());
         }
 
-        public Book GetBook(string title)
+        public async Task<Book> GetBook(string title)
         {
-            throw new NotImplementedException();
+            return await Task.FromResult(new Book());
         }
 
-        public IEnumerable<Book> GetRecipesForBook(Book book)
+        public async Task<IEnumerable<Book>> GetRecipesForBook(Book book)
         {
-            throw new NotImplementedException();
+            return await Task.FromResult(new List<Book>());
         }
 
-        public IEnumerable<Book> ReadAllBooks()
+        public async Task<IEnumerable<Book>> ReadAllBooks()
         {
-            throw new NotImplementedException();
+            return await Task.FromResult(new List<Book>());
         }
 
-        public void UpdateBook(Book book, int UserID)
+        public async Task UpdateBook(Book book, int UserID)
         {
-            throw new NotImplementedException();
+            await Task.CompletedTask;
         }
     }
 }

@@ -1,32 +1,35 @@
 ﻿using Application.Abstractions;
 using Core.Models;
+
 namespace Infrastructure.Services
 {
     public class UserService : IUserService
     {
-        public void CreateUser(string username, string password)
+        public async Task CreateUser(string username, string password)
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"Creating user with username: {username} and password: {password}");
+            await Task.CompletedTask;
         }
 
-        public void DeleteUser(int UserID)
+        public async Task DeleteUser(int UserID)
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"Deleting user with ID: {UserID}");
+            await Task.CompletedTask;
         }
 
-        public User FindUserById(Func<int, User> id)
+        public async Task<User> FindUserById(Func<int, User> id)
         {
-            throw new NotImplementedException();
+            return await Task.FromResult(new User());
         }
 
-        public IEnumerable<User> ReadUsers()
+        public async Task<IEnumerable<User>> ReadUsers()
         {
-            throw new NotImplementedException();
+            return await Task.FromResult(new List<User>());
         }
 
-        public void UpdateUser(User user)
+        public async Task UpdateUser(User user)
         {
-            throw new NotImplementedException();
+            await Task.CompletedTask;
         }
     }
 }
