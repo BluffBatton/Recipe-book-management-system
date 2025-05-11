@@ -3,9 +3,9 @@ namespace Application.Abstractions
 {
     public interface IUserService
     {
-        void CreateUser(string username, string password);
+        void CreateUser(User user);
 
-        IEnumerable<User> ReadUsers();
+        List<User> ReadUsers();
 
         void UpdateUser(User user);
 
