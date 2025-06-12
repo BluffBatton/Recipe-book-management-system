@@ -1,2 +1,2 @@
-# .NET-Course
-As the name suggests, this is a repository for a course on .NET development.
+# Recipe book management system
+Project provides management of books with recipes
